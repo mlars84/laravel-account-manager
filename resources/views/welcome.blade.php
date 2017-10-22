@@ -91,9 +91,11 @@
                 flex-direction: row;
             }
 
-            .accounts-list {
+            .list {
+                padding-top: 7px;
                 list-style-type: none;
                 justify-content: flex-start;
+                text-align: left;
             }
         </style>
     </head>
@@ -114,19 +116,28 @@
                 <div class="title m-b-md">
                     Account Manager
                 </div>
+                <hr>
                 <form class="form" action="">
                     <input class="inputs" type="text" placeholder="First Name">
                     <input class="inputs" type="text" placeholder="Last Name">
                     <input class="inputs" type="email" placeholder="Email">
-                    <input class="inputs" type="number" placeholder="Account Type ID">
+                    <h3>Account Types and ID's:</h3>
+                    <ul class="list">
+                        <li>Confirmation: 1</li>
+                        <li>Setup: 2</li>
+                        <li>Activated: 3</li> 
+                        <li>Deactivated: 4</li>
+                    </ul>
+                    <input class="inputs" type="number" placeholder="Enter Account Type ID">
                     <input class="inputs" type="checkbox"><p class="activate-text">Click to Activate!</p>
                     <button class="button">Submit</button>
                 </form>
+                <hr>
                 <div class="accounts">
-                    <h3>Account Types:</h3>
-                    <ul class="accounts-list">
+                    <h3>Active Accounts:</h3>
+                    <ul class="list">
                         @foreach ($accounts as $account)
-                            <li>{{$account}}</li>
+                            <li>{{ $account->first_name }} {{ $account->last_name }}: {{ $account->email }}</li>
                         @endforeach
                     </ul>
                 </div>

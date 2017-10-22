@@ -11,12 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-
-    $accounts = [
-        'Account 1',
-        'Account 2'
-    ];
-
-    return view('welcome', compact('accounts'));
-});
+Route::get('/', 'AccountsController@index');

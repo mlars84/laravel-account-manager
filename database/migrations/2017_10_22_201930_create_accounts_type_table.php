@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAccountsTable extends Migration
+class CreateAccountsTypeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('accounts', function (Blueprint $table) {
+        Schema::create('accounts_type', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('email')->unique();
-            $table->integer('account_type_id')->unique();
-            $table->boolean('active');
-            $table->rememberToken();
+            $table->string('account_type');
+            $table->text('description');
+            $table->integer('cost');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class CreateAccountsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('accounts');
+        Schema::dropIfExists('accounts_type');
     }
 }
