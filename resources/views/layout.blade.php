@@ -11,6 +11,6 @@
         <link href="./css/accounts.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        @yield('content')
+      @yield('content')
     </body>
 </html>
