@@ -24,11 +24,11 @@ class AccountsController extends Controller
     {
 
         $accounts = new Account;
-        $accounts-> first_name = $fname;
-        $accounts-> last = $lname;
-        $accounts-> email = $email;
-        $accounts-> account_type_type = $ati;
-        $accounts-> active = $active;
+        $accounts->first_name = $fname;
+        $accounts->last_name = $lname;
+        $accounts->email = $email;
+        $accounts->account_type_id = $ati;
+        $accounts->active = $active;
 
         $accounts->save();
 
