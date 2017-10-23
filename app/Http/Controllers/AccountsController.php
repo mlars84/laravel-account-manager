@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Account;
-// use App\Post;  
 
 class AccountsController extends Controller
 {
