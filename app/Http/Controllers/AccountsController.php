@@ -23,6 +23,12 @@ class AccountsController extends Controller
     public function store(Request $request)
     {
 
+        $fname = $request->fname;
+        $lname = $request->lname;
+        $email = $request->email;
+        $ati = $request->ati;
+        $active = $request->active;
+
         $accounts = new Account;
         $accounts->first_name = $fname;
         $accounts->last_name = $lname;
