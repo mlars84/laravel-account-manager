@@ -11,6 +11,6 @@ class AccountsController extends Controller
     {
         $accounts = Account::isActive();
         
-        return view('welcome', compact('accounts'));
+        return view('account', compact('accounts'));
     }
 }
