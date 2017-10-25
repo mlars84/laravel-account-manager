@@ -17,7 +17,8 @@
             <li>Deactivated: 4</li>
         </ul>
         <input class="inputs" type="number" name="ati" placeholder="Enter Account Type ID">
-        <input class="inputs" type="number" name="active" placeholder="0 for inactive/1 for active"><p>Click to Activate!</p>
+        <input class="inputs" type="number" name="active" placeholder="0 for inactive/1 for active">
+        <!-- <p>Click to Activate!</p> -->
         <button class="button">Submit</button>
       </form>
   </div>
